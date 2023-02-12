@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%=
-        parts['head.gsp'].render([
+    <%
+        out << parts['head.gsp'].render([
+            author: 'Red Dog Ensemble',
+            description: text.getExcerpt(25) + '...',
             pageTitle: "${ globals.siteTitle }: ${ frontMatter.title }",
-            ogTitle: frontMatter.title,
-            author: frontMatter.author,
-            description: frontMatter.description,
-            path: frontMatter.path,
-            ogImage: frontMatter.ogImage,
-            ogImageWidth: frontMatter.ogImageWidth,
-            ogImageHeight: frontMatter.ogImageHeight
+            path: text.path,
+            og: [
+                description: text.getExcerpt(25) + '...',
+                title: frontMatter.title,
+                image: frontMatter.find('ogImage').orElse(null),
+                imageWidth: frontMatter.find('ogImageWidth').orElse(null),
+                imageHeight: frontMatter.find('ogImageHeight').orElse(null)
+            ]
         ])
-    %>
-    <%=
-        parts['body.gsp'].render([
-            article: text
+
+        out << parts['body.gsp'].render([
+            article: text.render()
         ])
     %>
 </html>

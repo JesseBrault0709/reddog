@@ -1,21 +1,23 @@
 <head>
     <meta charset="utf-8" />
 
-    <meta name="author" content="${ binding.author }" />
+    <meta name="author" content="${ binding.author ?: globals.siteAuthor }" />
     <meta name="description" content="${ binding.description }" />
 
-    <meta property="og:url" content="${ globals.baseUrl + '/' + binding.path }" />
-    <meta property="og:title" content="${ binding.ogTitle }" />
-    <meta property="og:description" content="${ binding.description }" />
-
     <%
-        if (binding.ogImage) {
-            out << '<meta property="og:image" content="' + binding.ogImage + '" />'
-            if (!binding.ogImageWidth || !binding.ogImageHeight) {
-                throw new IllegalArgumentException('ogImageWidth and ogImageHeight are required.')
+        if (binding.og) {
+            out << tagBuilder.meta(property: 'og:url', content: globals.baseUrl + '/' + binding.path)
+            out << tagBuilder.meta(property: 'og:title', content: binding.og.title)
+            out << tagBuilder.meta(property: 'og:description', content: binding.og.description)
+
+            if (binding.og.image) {
+                out << tagBuilder.meta(property: 'og:image', content: binding.og.image)
+                if (!binding.og.imageWidth || !binding.og.imageHeight) {
+                    throw new IllegalArgumentException('og.imageWidth and og.imageHeight are required.')
+                }
+                out << tagBuilder.meta(property: 'og:image:width', content: binding.og.imageWidth)
+                out << tagBuilder.meta(property: 'og:image:height', content: binding.og.imageHeight)
             }
-            out << '<meta property="og:image:width" content="' + binding.ogImageWidth + '" />'
-            out << '<meta property="og:image:height" content="' + binding.ogImageHeight + '" />'
         }
     %>
 

@@ -2,14 +2,14 @@
 <html lang="en">
     <%=
         parts['head.gsp'].render([
-            pageTitle: "${ globals.siteTitle }: News",
-            ogTitle: 'News',
             author: 'Red Dog Ensemble',
-            description: 'News for Red Dog Ensemble',
+            description: 'News about Red Dog Ensemble.',
+            pageTitle: "${ globals.siteTitle }: News",
             path: 'news.html',
-            // ogImage: frontMatter.ogImage,
-            // ogImageWidth: frontMatter.ogImageWidth,
-            // ogImageHeight: frontMatter.ogImageHeight
+            og: [
+                description: 'News about Red Dog Ensemble.',
+                title: 'News'
+            ]
         ])
     %>
     <body>

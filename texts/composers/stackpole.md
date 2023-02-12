@@ -2,8 +2,6 @@
 template: composer.gsp
 title: Will Stackpole
 role: Composer, Recording Engineer, Co-Founder
-author: Red Dog Ensemble
-path: composers/stackpole.html
 ---
 
 Will Stackpole is an American composer whose music has been called "lively” and possessing a "savage charm" by the New York Times. Stackpole's works have been played across the country by many notable ensembles including the New Jersey Symphony Orchestra, the Levin/Davin Duo, and the Juilliard Orchestra. He began his musical career as an electric guitarist and recording engineer, primarily performing in rock bands in his home state of New Hampshire and later in Hoboken, New Jersey. In college, Will began writing concert music and quickly developed a unique compositional voice. He spent two years studying composition with Justin Dello Joio while working in New York as a freelance composer and orchestrator for theater, film, and television. Mr. Stackpole has since refocused his efforts on creating conceptually innovative concert music. His work blends a wide spectrum of influences: from rock to opera and from Miles Davis to Dutilleux.

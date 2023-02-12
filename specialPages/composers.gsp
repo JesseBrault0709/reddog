@@ -2,11 +2,14 @@
 <html lang="en">
     <%=
         parts['head.gsp'].render([
-            pageTitle: "${ globals.siteTitle }: Composers",
-            ogTitle: 'Composers',
             author: 'Red Dog Ensemble',
-            description: 'Composers of Red Dog Ensemble',
-            path: 'composers.html'
+            description: 'Composers of Red Dog Ensemble.',
+            pageTitle: "${ globals.siteTitle }: Composers",
+            path: 'composers.html',
+            og: [
+                description: 'Composers of Red Dog Ensemble.',
+                title: 'Composers'
+            ]
         ])
     %>
     <body>

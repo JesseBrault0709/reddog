@@ -1,8 +1,6 @@
 ---
 template: about.gsp
 title: About
-author: Red Dog Ensemble
-description: Red Dog Ensemble is a collaboration of young musical minds who seek to create and perform music not only relevant for our time but also engaging, fresh, and beautiful.
 path: about.html
 ogImage: images/sunsetDog.jpg
 ogImageWidth: 600
