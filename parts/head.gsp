@@ -1,14 +1,20 @@
+<%
+    def fixDescription = { description ->
+        description.replaceAll('"', "'")
+    }
+%>
+
 <head>
     <meta charset="utf-8" />
 
     <meta name="author" content="${ binding.author ?: globals.siteAuthor }" />
-    <meta name="description" content="${ binding.description }" />
+    <meta name="description" content="${ fixDescription(binding.description) }" />
 
     <%
         if (binding.og) {
-            out << tagBuilder.meta(property: 'og:url', content: globals.baseUrl + '/' + binding.path)
+            out << tagBuilder.meta(property: 'og:url', content: globals.baseUrl + '/' + binding.path + '.html')
             out << tagBuilder.meta(property: 'og:title', content: binding.og.title)
-            out << tagBuilder.meta(property: 'og:description', content: binding.og.description)
+            out << tagBuilder.meta(property: 'og:description', content: fixDescription(binding.og.description))
 
             if (binding.og.image) {
                 out << tagBuilder.meta(property: 'og:image', content: binding.og.image)

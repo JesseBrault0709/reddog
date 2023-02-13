@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%
+        out << parts['head.gsp'].render([
+            author: text.frontMatter.author,
+            description: text.getExcerpt(25) + '...',
+            og: [
+                title: text.frontMatter.title,
+                description: text.getExcerpt(25) + '...',
+                image: text.frontMatter.image,
+                imageWidth: text.frontMatter.imageWidth,
+                imageHeight: text.frontMatter.imageHeight
+            ],
+            pageTitle: globals.siteTitle + ': ' + text.frontMatter.title,
+            path: text.path,
+        ])
+
+        out << parts['body.gsp'].render([
+            content: parts['postArticle.gsp'].render()
+        ])
+    %>
+</html>

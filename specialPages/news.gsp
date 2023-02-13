@@ -14,14 +14,19 @@
     %>
     <body>
         <%
-            // TODO: integrate Components/gcp into ssg so that this is easy and not repetetive
-            out << parts['header.gsp'].render()
+            def textExcerpts = texts.findAll { it.path.startsWith 'posts/' }.collect {
+                parts['newsExcerpt.gsp'].render([
+                    title: it.frontMatter.title,
+                    date: it.frontMatter.date,
+                    author: it.frontMatter.author,
+                    excerpt: it.getExcerpt(25) + '...',
+                    link: 'TODO'
+                ])
+            }.join()
 
-            texts.findAll { it.path.startsWith 'posts/' }.each {
-                out << it.render()
-            }
-
-            out << parts['footer.gsp'].render()
+            out << parts['body.gsp'].render([
+                content: textExcerpts
+            ])
         %>
     </body>
 </html>

@@ -5,9 +5,7 @@
             out << parts['header.gsp'].render() 
         %>
         <main>
-            <article>
-                <%= binding.article %>
-            </article>
+            <%= binding.content %>
         </main>
         <%
             out << parts['footer.gsp'].render()
