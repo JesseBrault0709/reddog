@@ -5,7 +5,6 @@
             author: 'Red Dog Ensemble',
             description: text.getExcerpt(25) + '...',
             pageTitle: "${ globals.siteTitle }: ${ frontMatter.title }",
-            path: text.path,
             og: [
                 description: text.getExcerpt(25) + '...',
                 title: frontMatter.title,

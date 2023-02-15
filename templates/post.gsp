@@ -7,12 +7,11 @@
             og: [
                 title: text.frontMatter.title,
                 description: text.getExcerpt(25) + '...',
-                image: text.frontMatter.image,
+                image: urlBuilder.relative('images/' + text.frontMatter.image),
                 imageWidth: text.frontMatter.imageWidth,
                 imageHeight: text.frontMatter.imageHeight
             ],
-            pageTitle: globals.siteTitle + ': ' + text.frontMatter.title,
-            path: text.path,
+            pageTitle: globals.siteTitle + ': ' + text.frontMatter.title
         ])
 
         out << parts['body.gsp'].render([

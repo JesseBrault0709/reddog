@@ -11,7 +11,7 @@
         if (text.frontMatter.image) {
             out << tagBuilder.img([
                 alt: text.frontMatter.imageAlt,
-                src: text.frontMatter.image
+                src: urlBuilder.relative('images/' + text.frontMatter.image)
             ])
         }
 

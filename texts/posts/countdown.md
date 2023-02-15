@@ -3,7 +3,7 @@ template: post.gsp
 title: Countdown to Count Off
 date: 9/26/19
 author: Jesse Brault
-image: ../images/scores.jpg
+image: scores.jpg
 imageAlt: Scores laid out on a desk.
 imageWidth: 600
 imageHeight: 400

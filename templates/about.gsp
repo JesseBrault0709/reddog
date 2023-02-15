@@ -4,7 +4,6 @@
         out << parts['head.gsp'].render([
             description: text.getExcerpt(25) + '...',
             pageTitle: "${ globals.siteTitle }: ${ frontMatter.title }",
-            path: text.path,
             og: [
                 description: text.getExcerpt(25) + '...',
                 image: frontMatter.ogImage,
