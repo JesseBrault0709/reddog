@@ -1,7 +1,7 @@
 ---
 template: about.gsp
 title: About
-ogImage: images/sunsetDog.jpg
+ogImage: sunsetDog.jpg
 ogImageWidth: 600
 ogImageHeight: 400
 ---

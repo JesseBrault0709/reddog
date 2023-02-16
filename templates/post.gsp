@@ -7,7 +7,7 @@
             og: [
                 title: text.frontMatter.title,
                 description: text.getExcerpt(25) + '...',
-                image: urlBuilder.relative('images/' + text.frontMatter.image),
+                image: urlBuilder.absolute('images/' + text.frontMatter.image),
                 imageWidth: text.frontMatter.imageWidth,
                 imageHeight: text.frontMatter.imageHeight
             ],

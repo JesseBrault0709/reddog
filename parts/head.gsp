@@ -12,7 +12,7 @@
 
     <%
         if (binding.og) {
-            out << tagBuilder.meta(property: 'og:url', content: globals.baseUrl + '/' + targetPath)
+            out << tagBuilder.meta(property: 'og:url', content: urlBuilder.absolute)
             out << tagBuilder.meta(property: 'og:title', content: binding.og.title)
             out << tagBuilder.meta(property: 'og:description', content: fixDescription(binding.og.description))
 

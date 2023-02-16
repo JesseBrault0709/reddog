@@ -3,13 +3,13 @@
     <%
         out << parts['head.gsp'].render([
             description: text.getExcerpt(25) + '...',
-            pageTitle: "${ globals.siteTitle }: ${ frontMatter.title }",
+            pageTitle: "${ globals.siteTitle }: ${ text.frontMatter.title }",
             og: [
                 description: text.getExcerpt(25) + '...',
-                image: frontMatter.ogImage,
-                imageWidth: frontMatter.ogImageWidth,
-                imageHeight: frontMatter.ogImageHeight,
-                title: frontMatter.title
+                image: urlBuilder.absolute('images/' + text.frontMatter.ogImage),
+                imageWidth: text.frontMatter.ogImageWidth,
+                imageHeight: text.frontMatter.ogImageHeight,
+                title: text.frontMatter.title
             ]
         ])
 
