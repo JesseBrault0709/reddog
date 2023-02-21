@@ -7,7 +7,7 @@
         "build": "npm run ssg && npm run static && npm run prettier",
         "installSsg": "curl -L https://github.com/JesseBrault0709/ssg/releases/download/v0.0.1/ssg-0.0.1.tar -o ssg.tar && tar -xvf ssg.tar",
         "prettier": "prettier -w build",
-        "ssg": "ssg/cli/build/install/ssg/bin/ssg build",
+        "ssg": "ssg/cli/build/install/ssg/bin/ssg --info build",
         "static": "cp -r images build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

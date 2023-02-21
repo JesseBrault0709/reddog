@@ -17,8 +17,19 @@
             // TODO: integrate Components/gcp into ssg so that this is easy and not repetetive
             out << parts['header.gsp'].render()
 
-            texts.findAll { it.path.startsWith 'composers/' }.each {
-                out << it.getExcerpt(25) << '...'
+            texts.findAll { it.path.startsWith 'composers/' }.each { text ->
+                def fullPath = tasks.findAllByType(taskTypes.textToHtmlFile).find {
+                    it.input.path == text.path
+                }?.output.htmlPath
+
+                if (fullPath == null) {
+                    throw new NullPointerException("could not find a matching fullPath for ${ text.path }")
+                } else {
+                    out << parts['bio/excerpt.gsp'].render([
+                        text: text,
+                        fullPath: fullPath 
+                    ])
+                }
             }
 
             out << parts['footer.gsp'].render()
