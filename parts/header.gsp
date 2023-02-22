@@ -1,24 +1,54 @@
 <%
-    def makeNavButton = { name, page ->
-        def href = urlBuilder.relative(page)
-        def a = tagBuilder.a([href: href], name)
+    /** 
+     * TODO: find a better way to ascertain the taskType
+     * @param inputPath the path of the input file we are finding a url for; eg: 'index.md'.
+     * @return a relative url to the htmlPath of the input
+     */
+    def getNavButtonUrl = { inputPath ->
+        def taskType = inputPath.endsWith('.md') ?
+            taskTypes.textToHtmlFile :
+            inputPath.endsWith('.gsp') ?
+                taskTypes.specialPageToHtmlFile :
+                null
+
+        if (taskType == null) {
+            throw new IllegalArgumentException("cannot find taskType for inputPath ${ inputPath }")
+        }
+
+        def htmlPath = tasks.findAllByType(taskType).find {
+            it.input.path == inputPath
+        }?.output?.htmlPath
+
+        if (htmlPath == null) {
+            throw new NullPointerException("cannot get htmlPath for ${ inputPath }")
+        }
+
+        urlBuilder.relative(htmlPath)
+    }
+
+    def makeNavButton = { name, inputPath ->
+        def a = tagBuilder.a([href: getNavButtonUrl(inputPath)], name)
         tagBuilder.li a
     }
 %>
-
 <header>
     <h1>$globals.siteTitle</h1>
     <nav>
-        <%
-            def navButtons = [
-                makeNavButton('About', 'about.html'),
-                makeNavButton('News', 'news.html'),
-                makeNavButton('The Composers', 'composers.html'),
-                makeNavButton('The Musicians', 'musicians.html'),
-                makeNavButton('Donate', 'donate.html'),
-                makeNavButton('Contact', 'contact.html')
-            ]
-            out << tagBuilder.ul(navButtons.join())
-        %>
+        <ul>
+            <%
+                
+
+                // TODO: build urls
+                def navButtons = [
+                    makeNavButton('About', 'index.md'),
+                    makeNavButton('News', 'news.gsp'),
+                    makeNavButton('The Composers', 'composers.gsp'),
+                    makeNavButton('The Musicians', 'musicians.gsp'),
+                    makeNavButton('Donate', 'donate.gsp'),
+                    makeNavButton('Contact', 'contact.gsp')
+                ]
+                out << navButtons.join('\n')
+            %>
+        </ul>
     </nav>
 </header>

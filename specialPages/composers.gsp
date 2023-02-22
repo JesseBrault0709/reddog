@@ -17,7 +17,7 @@
             def content = texts.findAll { it.path.startsWith 'composers/' }.collect { text ->
                 def fullPath = tasks.findAllByType(taskTypes.textToHtmlFile).find {
                     it.input.path == text.path
-                }?.output.htmlPath
+                }?.output?.htmlPath
 
                 if (fullPath == null) {
                     throw new NullPointerException("could not find a matching fullPath for ${ text.path }")

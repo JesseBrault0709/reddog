@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+
+    h1 {
+        font-family: $ebg, serif;
+        letter-spacing: 0.05em;
+        color: var(--white);
+    }
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media screen and (min-width: 700px) and (orientation: landscape) {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 5px 10px;
+                letter-spacing: 0.05em;
+
+                a,
+                a:visited {
+                    font-family: 'Computer Modern Serif', serif;
+                    color: var(--gray);
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

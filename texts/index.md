@@ -1,5 +1,5 @@
 ---
-template: about.gsp
+template: index.gsp
 title: About
 ogImage: sunsetDog.jpg
 ogImageWidth: 600

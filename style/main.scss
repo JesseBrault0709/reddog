@@ -1,0 +1,25 @@
+@import 'globals';
+@import 'header';
+@import 'body';
+@import 'article';
+
+:root {
+    --black: #{$black};
+    --gray: #{$gray};
+    --lightGray: #{$lightGray};
+    --white: #{$white};
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 1.5em;
+    letter-spacing: 0.025em;
+    color: var(--lightGray);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}

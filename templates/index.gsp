@@ -14,7 +14,7 @@
         ])
 
         out << parts['body.gsp'].render([
-            content: text.render()
+            content: tagBuilder.article(text.render())
         ])
     %>
 </html>

@@ -1,6 +1,6 @@
 <body>
     <div id="background-container">&nbsp;</div>
-    <div id="wrapper">
+    <div id="body-wrapper">
         <%
             out << parts['header.gsp'].render() 
         %>

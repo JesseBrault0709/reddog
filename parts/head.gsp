@@ -28,4 +28,12 @@
     %>
 
     <title>$binding.pageTitle</title>
+
+    <link rel="stylesheet" href="${ urlBuilder.relative('main.css') }" />
+    <link rel="stylesheet" href="${ urlBuilder.relative('fonts/computer_modern_sans/cmun-sans.css') }" />
+    <link rel="stylesheet" href="${ urlBuilder.relative('fonts/computer_modern_serif/cmun-serif.css') }" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
