@@ -1,0 +1,17 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+    // font-family: 'Crimson Text', serif;
+    // font-size: 22px;
+    // color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}

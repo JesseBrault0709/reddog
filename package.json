@@ -4,17 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm run ssg && npm run static && npm run prettier",
-        "installSsg": "curl -L https://github.com/JesseBrault0709/ssg/releases/download/v0.0.1/ssg-0.0.1.tar -o ssg.tar && tar -xvf ssg.tar",
+        "build": "npm run ssg && npm run static && npm run style && npm run prettier",
+        "dev": "nodemon",
         "prettier": "prettier -w build",
         "ssg": "ssg/cli/build/install/ssg/bin/ssg --info build",
         "static": "cp -r images build",
+        "style": "sass style:build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "prettier": "^2.8.4"
+        "nodemon": "^2.0.20",
+        "prettier": "^2.8.4",
+        "sass": "^1.58.3"
     }
 }

@@ -1,0 +1,5 @@
+{
+    "ignore": ["build"],
+    "ext": "md,gsp,js,scss",
+    "exec": "npm run build"
+}
