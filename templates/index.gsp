@@ -14,7 +14,13 @@
         ])
 
         out << parts['body.gsp'].render([
-            content: tagBuilder.article(text.render())
+            content: tagBuilder.article(text.render()),
+            hero: [
+                src: text.frontMatter.heroSrc,
+                alt: text.frontMatter.heroAlt,
+                width: text.frontMatter.heroWidth,
+                height: text.frontMatter.heroHeight
+            ]
         ])
     %>
 </html>

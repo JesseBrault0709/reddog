@@ -4,35 +4,18 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--white);
 
-    #background-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        background-image: url(images/sunsetDog.jpg);
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
+    #hero {
+        width: 100%;
+        height: auto;
     }
 
-    #body-wrapper {
-        background-color: rgba(17, 17, 17, 0.9);
-        box-sizing: border-box;
-        width: 100%;
-        padding: 15px 15px 0 15px;
+    main {
+        margin: 35px auto;
 
-        main {
-            margin: 35px auto;
-
-            @media screen and (min-width: 400px) {
-                max-width: 500px;
-            }
+        @media screen and (min-width: 400px) {
+            max-width: 500px;
         }
     }
 }

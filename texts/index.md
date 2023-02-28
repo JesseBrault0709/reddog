@@ -1,7 +1,11 @@
 ---
 template: index.gsp
 title: About
-ogImage: sunsetDog.jpg
+heroSrc: group.jpg
+heroAlt: Red Dog Ensemble Group Photo
+heroWidth: 600
+heroHeight: 400
+ogImage: group.jpg
 ogImageWidth: 600
 ogImageHeight: 400
 ---

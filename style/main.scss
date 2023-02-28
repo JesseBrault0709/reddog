@@ -7,6 +7,8 @@
     --black: #{$black};
     --gray: #{$gray};
     --lightGray: #{$lightGray};
+    --red: #{$red};
+    --darkRed: #{$darkRed};
     --white: #{$white};
 }
 
@@ -15,7 +17,7 @@ html {
     font-size: 17px;
     line-height: 1.5em;
     letter-spacing: 0.025em;
-    color: var(--lightGray);
+    color: var(--black);
 }
 
 *,
