@@ -8,6 +8,7 @@
         "dev": "nodemon",
         "prettier": "prettier -w build",
         "ssg": "ssg/cli/build/install/ssg/bin/ssg --info build",
+        "ssgDebug": "ssg/cli/build/install/ssg/bin/ssg --debug build",
         "static": "cp -r images build && cp -r fonts build",
         "style": "sass style:build",
         "test": "echo \"Error: no test specified\" && exit 1"
