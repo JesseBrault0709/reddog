@@ -1,6 +1,7 @@
 <%
     /** 
      * TODO: find a better way to ascertain the taskType
+     *
      * @param inputPath the path of the input file we are finding a url for; eg: 'index.md'.
      * @return a relative url to the htmlPath of the input
      */
@@ -36,12 +37,10 @@
     <nav>
         <ul>
             <%
-                
-
-                // TODO: build urls
                 def navButtons = [
                     makeNavButton('About', 'index.md'),
                     makeNavButton('News', 'news.gsp'),
+                    makeNavButton('The Album', 'album.gsp'),
                     makeNavButton('The Composers', 'composers.gsp'),
                     makeNavButton('The Musicians', 'musicians.gsp'),
                     makeNavButton('Donate', 'donate.gsp'),

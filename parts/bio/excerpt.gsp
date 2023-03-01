@@ -15,7 +15,9 @@
             role: text.frontMatter.role,
             image: text.frontMatter.image
         ])
-        out << tagBuilder.blockquote(text.getExcerpt(25) + '...')
+        out << tagBuilder.blockquote([
+            class: 'article-excerpt'
+        ], text.getExcerpt(25) + '...')
         out << tagBuilder.a([
             href: urlBuilder.relative(binding.fullPath)
         ], 'View More')

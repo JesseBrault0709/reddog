@@ -3,6 +3,8 @@ template: composer.gsp
 title: Will Stackpole
 role: Composer, Recording Engineer, Co-Founder
 image: stackpole.jpg
+imageWidth: 600
+imageHeight: 400
 ogImageWidth: 600
 ogImageHeight: 400
 ---

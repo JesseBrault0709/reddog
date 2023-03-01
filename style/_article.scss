@@ -1,5 +1,5 @@
 article {
-    margin: 0 30px;
+    margin: 30px 0;
     text-align: justify;
 
     h1 {
@@ -7,6 +7,23 @@ article {
         font-size: 1.5em;
         padding-bottom: 0.5em;
         border-bottom: 1px solid var(--gray);
+    }
+
+    h2 {
+        color: var(--darkRed);
+    }
+
+    h3 {
+        color: var(--red);
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+    }
+
+    blockquote.article-excerpt {
+        margin: 1em 0;
     }
 
     p {
