@@ -39,11 +39,9 @@
             <%
                 def navButtons = [
                     makeNavButton('About', 'index.md'),
-                    makeNavButton('News', 'news.gsp'),
                     makeNavButton('The Album', 'album.gsp'),
                     makeNavButton('The Composers', 'composers.gsp'),
                     makeNavButton('The Musicians', 'musicians.gsp'),
-                    makeNavButton('Donate', 'donate.gsp'),
                     makeNavButton('Contact', 'contact.gsp')
                 ]
                 out << navButtons.join('\n')

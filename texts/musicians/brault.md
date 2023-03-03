@@ -4,9 +4,9 @@ title: Jesse Brault
 role: Conductor and Co-Founder
 image: brault.jpg
 imageWidth: 400
-imageHeight: 600
+imageHeight: 597
 ogImageWidth: 400
-ogImageHeight: 600
+ogImageHeight: 597
 ---
 
 Conductor and composer **Jesse Brault** studied orchestral conducting at the Juilliard School with Maestros Alan Gilbert and James Ross. After making his New York debut at Alice Tully Hall in 2015, he conducted semesterly concerts with the Juilliard Conductors’ Lab Orchestra. During his studies, he worked with such distinguished conductors as Bernard Haitink, Gianandrea Noseda, Fabio Luisi, David Zinman, and James Gaffigan.
