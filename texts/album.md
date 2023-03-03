@@ -1,3 +1,3 @@
 # Neon and Oak
 
-Neon and Oak is an album.
+**NEON AND OAK** is Red Dog Ensemble's premiere album. Keeping with their goal of breaking as many classical music traditions as possible, they commissioned four brand new pieces for this album, which will be heard for the first time only on this release. Thematically, these pieces reflect the experience of life in an unsettled world.
