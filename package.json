@@ -6,10 +6,10 @@
     "scripts": {
         "build": "npm run ssg && npm run static && npm run style && npm run prettier",
         "dev": "nodemon",
-        "postinstall": "cd ssg && ./gradlew install",
+        "postinstall": "curl -L https://github.com/JesseBrault0709/ssg/releases/download/v0.1.0/ssg-0.1.0.tar | tar -xvf -",
         "prettier": "prettier -w build",
-        "ssg": "ssg/cli/build/install/ssg/bin/ssg --info build",
-        "ssgDebug": "ssg/cli/build/install/ssg/bin/ssg --debug build",
+        "ssg": "ssg-0.1.0/bin/ssg --info build",
+        "ssgDebug": "ssg-0.1.0/bin/ssg --debug build",
         "static": "cp -r images build && cp -r fonts build",
         "style": "sass style:build",
         "test": "echo \"Error: no test specified\" && exit 1"

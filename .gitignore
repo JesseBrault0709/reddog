@@ -1,4 +1,4 @@
 build
 node_modules
-ssg-0.0.1
+ssg-*
 .DS_Store
