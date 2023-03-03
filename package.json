@@ -6,6 +6,7 @@
     "scripts": {
         "build": "npm run ssg && npm run static && npm run style && npm run prettier",
         "dev": "nodemon",
+        "postinstall": "cd ssg && ./gradlew install",
         "prettier": "prettier -w build",
         "ssg": "ssg/cli/build/install/ssg/bin/ssg --info build",
         "ssgDebug": "ssg/cli/build/install/ssg/bin/ssg --debug build",
