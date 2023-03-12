@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm run ssg && npm run static && npm run style && npm run prettier",
+        "build": "npm run ssg && npm run static && npm run style && npm run prettier && npm run js",
         "dev": "nodemon",
+        "js": "babel js -d build",
         "postinstall": "curl -L https://github.com/JesseBrault0709/ssg/releases/download/v0.1.0/ssg-0.1.0.tar | tar -xvf -",
         "prettier": "prettier -w build",
         "ssg": "ssg-0.1.0/bin/ssg --info build",
@@ -18,6 +19,9 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@babel/cli": "^7.21.0",
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.20.2",
         "nodemon": "^2.0.20",
         "prettier": "^2.8.4",
         "sass": "^1.58.3"

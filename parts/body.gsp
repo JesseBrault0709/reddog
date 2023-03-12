@@ -17,4 +17,5 @@
     <%
         out << parts['footer.gsp'].render()
     %>
+    <script src="index.js"></script>
 </body>
