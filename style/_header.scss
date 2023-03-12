@@ -15,7 +15,34 @@ header {
     }
 
     nav {
-        ul {
+        #main-nav-hamburger-container.hide {
+            display: none;
+        }
+
+        #main-nav-hamburger-container.show {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1em;
+
+            #main-nav-hamburger-label {
+                font-family: $ebg;
+            }
+
+            #main-nav-hamburger-button {
+                border: none;
+                background: none;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+        }
+
+        ul.hide {
+            display: none;
+        }
+
+        ul.show {
             display: flex;
             flex-direction: column;
             align-items: center;
