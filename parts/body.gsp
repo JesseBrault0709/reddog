@@ -17,5 +17,5 @@
     <%
         out << parts['footer.gsp'].render()
     %>
-    <script src="index.js"></script>
+    <script src="${ urlBuilder.relative('index.js') }"></script>
 </body>
