@@ -1,4 +1,4 @@
-;(() => {
+window.addEventListener('load', () => {
     const hamburgerContainer = document.getElementById(
         'main-nav-hamburger-container'
     )
@@ -37,4 +37,4 @@
     mediaQuery.addEventListener('change', setNavClasses)
 
     setNavClasses()
-})()
+})
