@@ -1,7 +1,8 @@
 import { exec } from 'child_process'
 import { existsSync } from 'fs'
 import fs from 'fs/promises'
-import { dest, parallel, series, src } from 'gulp'
+import { dest, lastRun, parallel, series, src, watch } from 'gulp'
+import path from 'path'
 import sharp from 'sharp'
 import { Transform, TransformCallback, TransformOptions } from 'stream'
 import Vinyl from 'vinyl'
@@ -12,7 +13,8 @@ export const clean = async () => {
     }
 }
 
-export const fonts = () => src('fonts/**/*').pipe(dest('build/fonts'))
+export const fonts = () =>
+    src('fonts/**/*', { since: lastRun(fonts) }).pipe(dest('build/fonts'))
 
 class CompressImagesTransform extends Transform {
     constructor(opts?: TransformOptions) {
@@ -34,12 +36,13 @@ class CompressImagesTransform extends Transform {
                     if (err) {
                         callback(err)
                     } else {
+                        const { dir, name } = path.parse(srcVinyl.path)
                         callback(
                             null,
                             new Vinyl({
                                 base: srcVinyl.base,
                                 cwd: srcVinyl.cwd,
-                                path: srcVinyl.path,
+                                path: path.join(dir, name + '.jpg'),
                                 history: [...srcVinyl.history],
                                 contents: result
                             })
@@ -53,7 +56,7 @@ class CompressImagesTransform extends Transform {
 }
 
 export const images = async () => {
-    return src('images/*')
+    return src('images/*', { since: lastRun(images) })
         .pipe(new CompressImagesTransform())
         .pipe(dest('build/images'))
 }
@@ -70,4 +73,16 @@ export const ssg = () => {
 
 export const style = () => exec('npx sass style:build')
 
-export const build = series(parallel(fonts, images, ssg, style), prettier, js)
+export const build = series(parallel(fonts, images, js, ssg, style), prettier)
+
+export const dev = async () => {
+    watch('fonts/**/*', { ignoreInitial: false }, fonts)
+    watch('images/**/*', { ignoreInitial: false }, images)
+    watch('js/**/*', { ignoreInitial: false }, js)
+    watch(
+        ['parts/**/*', 'specialPages/**/*', 'templates/**/*', 'texts/**/*'],
+        { ignoreInitial: false },
+        series(ssg, prettier)
+    )
+    watch('style/**/*', { ignoreInitial: false }, series(ssg, prettier))
+}

@@ -4,7 +4,6 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon",
         "postinstall": "curl -L https://github.com/JesseBrault0709/ssg/releases/download/v0.1.0/ssg-0.1.0.tar | tar -xvf -",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -20,7 +19,6 @@
         "@types/sharp": "^0.31.1",
         "gulp": "^4.0.2",
         "gulp-cli": "^2.3.0",
-        "nodemon": "^2.0.20",
         "prettier": "^2.8.4",
         "sass": "^1.58.3",
         "sharp": "^0.31.3",

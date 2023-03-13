@@ -1,5 +1,6 @@
 node_modules
 parts
 specialPages
-ssg-0.0.1
 templates
+build/**/*.js
+build/**/*.css
