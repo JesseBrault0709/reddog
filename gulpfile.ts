@@ -84,5 +84,5 @@ export const dev = async () => {
         { ignoreInitial: false },
         series(ssg, prettier)
     )
-    watch('style/**/*', { ignoreInitial: false }, series(ssg, prettier))
+    watch('style/**/*', { ignoreInitial: false }, series(style, prettier))
 }
