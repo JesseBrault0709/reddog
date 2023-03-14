@@ -14,9 +14,10 @@ body {
 
     main {
         margin: 0 auto;
+        max-width: 600px;
 
-        @media screen and (min-width: 400px) {
-            max-width: 600px;
+        @media screen and (max-width: 699px) {
+            padding: 0 15px;
         }
     }
 }
