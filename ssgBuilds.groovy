@@ -3,12 +3,12 @@ build {
 
     siteSpec {
         name = 'Red Dog Ensemble'
-        baseUrl = 'https://reddogensemble.com/preview'
+        baseUrl = 'https://reddogensemble.com'
     }
     
     globals {
         siteTitle = 'Red Dog Ensemble'
-        baseUrl = 'https://reddogensemble.com/preview'
+        baseUrl = 'https://reddogensemble.com'
         siteAuthor = 'Red Dog Ensemble'
     }
 }
