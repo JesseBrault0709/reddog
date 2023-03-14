@@ -16,7 +16,7 @@
         out << parts['body.gsp'].render([
             content: tagBuilder.article(texts.find { it.path == 'album.md' }.render()),
             hero: [
-                src: 'neonAndOakCover.png',
+                src: 'neonAndOakCover.jpg',
                 alt: 'Album Cover of Neon and Oak.',
                 width: 500,
                 height: 500
