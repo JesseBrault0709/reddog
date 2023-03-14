@@ -15,6 +15,10 @@ header {
     }
 
     nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         #main-nav-hamburger-container.hide {
             display: none;
         }
@@ -23,7 +27,7 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            gap: 1em;
+            gap: 0.5em;
 
             #main-nav-hamburger-label {
                 font-family: $ebg;
@@ -34,7 +38,7 @@ header {
                 background: none;
                 margin: 0;
                 padding: 0;
-                line-height: 1;
+                line-height: 0;
             }
         }
 

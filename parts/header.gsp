@@ -38,7 +38,7 @@
         <div id="main-nav-hamburger-container">
             <span id="main-nav-hamburger-label">Menu</span>
             <button id="main-nav-hamburger-button">
-                <span class="material-symbols-outlined">menu</span>
+                <span id="main-nav-hamburger-span" class="material-symbols-outlined"></span>
             </button>
         </div>
         <ul id="main-nav-ul">

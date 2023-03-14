@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
         'main-nav-hamburger-container'
     )
     const hamburgerButton = document.getElementById('main-nav-hamburger-button')
+    const hamburgerSpan = document.getElementById('main-nav-hamburger-span')
     const ul = document.getElementById('main-nav-ul')
 
     let menuOpen = false
@@ -16,9 +17,11 @@ window.addEventListener('load', () => {
             if (menuOpen) {
                 ul.classList.remove('hide')
                 ul.classList.add('show')
+                hamburgerSpan.innerText = 'close'
             } else {
                 ul.classList.remove('show')
                 ul.classList.add('hide')
+                hamburgerSpan.innerText = 'menu'
             }
         } else {
             menuOpen = false
