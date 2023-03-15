@@ -68,6 +68,7 @@ export const prettier = () => exec('npx prettier -w build')
 export const ssg = () => {
     const child = exec('ssg-0.1.0/bin/ssg --info build')
     child.stdout?.pipe(process.stdout)
+    child.stderr?.pipe(process.stderr)
     return child
 }
 
