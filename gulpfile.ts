@@ -72,7 +72,12 @@ export const ssg = () => {
     return child
 }
 
-export const style = () => exec('npx sass style:build')
+export const style = () => {
+    const child = exec('npx sass style:build')
+    child.stdout?.pipe(process.stdout)
+    child.stderr?.pipe(process.stderr)
+    return child
+}
 
 export const build = series(parallel(fonts, images, js, ssg, style), prettier)
 

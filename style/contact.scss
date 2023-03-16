@@ -1,0 +1,43 @@
+@import 'globals';
+
+#contact-form-intro {
+    margin: 1em 0;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .contact-form-control {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label,
+    input,
+    textarea,
+    button {
+        font-family: $ebg;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        font-size: 17px;
+        padding: 0.5em;
+        border: 1px solid var(--gray);
+        border-radius: 3px;
+    }
+
+    input,
+    button {
+        height: 2.5em;
+    }
+
+    textarea {
+        height: 8em;
+        resize: none;
+    }
+}
