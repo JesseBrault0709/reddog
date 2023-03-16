@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const hamburgerContainer = document.getElementById(
         'main-nav-hamburger-container'
     )
