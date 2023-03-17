@@ -1,17 +1,39 @@
 @import 'globals';
 
-#contact-form-intro {
+.contact-form-intro {
     margin: 1em 0;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    // gap: 0.5em;
 
     .contact-form-control {
         display: flex;
         flex-direction: column;
+    }
+
+    .contact-form-error,
+    #contact-form-submit-message {
+        font-family: $ebg;
+        font-size: 0.75em;
+        font-style: italic;
+    }
+
+    .contact-form-error.show,
+    #contact-form-submit-message.show {
+        opacity: 1;
+    }
+
+    .contact-form-error.hide,
+    #contact-form-submit-message.hide {
+        opacity: 0;
+        transition: opacity 2s linear;
+    }
+
+    #contact-form-submit-message.failure {
+        color: red;
     }
 
     label,

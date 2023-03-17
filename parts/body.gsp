@@ -18,4 +18,13 @@
         out << parts['footer.gsp'].render()
     %>
     <script src="${ urlBuilder.relative('index.js') }"></script>
+    <%
+        if (binding.extraScripts) {
+            binding.extraScripts.each {
+                out << tagBuilder.script([
+                    src: urlBuilder.relative(it)
+                ], '')
+            }
+        }
+    %>
 </body>

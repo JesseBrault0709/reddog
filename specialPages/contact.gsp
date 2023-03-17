@@ -13,7 +13,8 @@
         ])
 
         out << parts['body.gsp'].render([
-            content: parts['contact/form.gsp'].render()
+            content: parts['contact/form.gsp'].render(),
+            extraScripts: ['contact.js']
         ])
     %>
 </html>
