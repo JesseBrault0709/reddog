@@ -21,10 +21,9 @@
     <%
         if (binding.extraScripts) {
             binding.extraScripts.each {
-                out << tagBuilder.script([
-                    src: urlBuilder.relative(it)
-                ], '')
+                out << it
             }
         }
     %>
+    <script src="https://kit.fontawesome.com/7382441939.js" crossorigin="anonymous"></script>
 </body>

@@ -1,5 +1,6 @@
 article {
     text-align: justify;
+    max-width: 600px;
 
     .headshot-title {
         $vertical-margin: 0.3em;
@@ -38,6 +39,7 @@ article {
 
     p {
         margin: 30px 0;
+        padding: 0 15px;
         font-family: 'Palatino', sans-serif;
     }
 }

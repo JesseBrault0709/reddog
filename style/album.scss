@@ -1,0 +1,83 @@
+@import 'globals';
+
+#cover {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+
+    @media screen and (min-width: 750px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--barnRed);
+        color: var(--white);
+
+        p {
+            text-align: center;
+
+            @media screen and (min-width: 800px) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: 900px) {
+                width: 65%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+#streaming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+    #platforms {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1em;
+        width: 75vw;
+        justify-content: space-around;
+
+        @media screen and (min-width: 600px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .platform {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            color: var(--darkRed);
+            text-decoration: none;
+
+            .platform-icon {
+                font-size: 5em;
+            }
+
+            span {
+                text-align: center;
+                font-family: $pal;
+            }
+        }
+
+        .platform:hover {
+            color: var(--red);
+        }
+    }
+}
