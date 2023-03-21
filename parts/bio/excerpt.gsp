@@ -6,26 +6,23 @@
     }
     check 'text'
     check 'fullPath'
+
+    def text = binding.text
 %>
 <article>
-    <%
-        def text = binding.text
-        
-        def b = new StringBuilder(); // semi-colon otherwise vscode syntax highlighting breaks
-        b << parts['bio/headshotTitle.gsp'].render([
-            title: text.frontMatter.title,
-            role: text.frontMatter.role,
-            image: text.frontMatter.image
-        ])
-        b << tagBuilder.blockquote([
-            class: 'article-excerpt'
-        ], text.getExcerpt(25) + '...')
-        b << tagBuilder.a([
-            href: urlBuilder.relative(binding.fullPath)
-        ], 'View More')
-
-        out << parts['article/text.gsp'].render([
-            content: b.toString()
-        ])
-    %>
+    <div class="gap-1 column-600">
+        <%=
+            parts['bio/headshotTitle.gsp'].render([
+                title: text.frontMatter.title,
+                role: text.frontMatter.role,
+                image: text.frontMatter.image
+            ])
+        %>
+        <div class="gap-1 left-right-padded">
+            <blockquote class="quote">
+                <%= text.getExcerpt(25) + '...' %>
+            </blockquote>
+            <a href="${ urlBuilder.relative(binding.fullPath) }">View More</a>
+        </div>
+    </div>
 </article>

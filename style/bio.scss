@@ -1,0 +1,30 @@
+.headshot-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .title-and-role {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .title {
+            color: var(--darkRed);
+        }
+
+        .role {
+            color: var(--red);
+        }
+    }
+
+    .featured-image {
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.quote {
+    margin: 0;
+    text-align: justify;
+}

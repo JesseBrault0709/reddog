@@ -44,7 +44,7 @@
         <ul id="main-nav-ul">
             <%
                 def navButtons = [
-                    makeNavButton('About', 'index.md'),
+                    makeNavButton('About', 'index.gsp'),
                     makeNavButton('The Album', 'album.gsp'),
                     makeNavButton('The Composers', 'composers.gsp'),
                     makeNavButton('The Musicians', 'musicians.gsp'),

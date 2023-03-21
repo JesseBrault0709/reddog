@@ -10,7 +10,10 @@
             pageTitle: "${ globals.siteTitle }: Neon and Oak",
             og: [
                 description: description,
-                title: 'Neon and Oak'
+                title: 'Neon and Oak',
+                image: urlBuilder.absolute('images/neonAndOakCover.jpg'),
+                imageWidth: 600,
+                imageHeight: 600
             ]
         ])
 

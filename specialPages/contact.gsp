@@ -13,11 +13,7 @@
         ])
 
         out << parts['body.gsp'].render([
-            content: tagBuilder.article(
-                parts['article/text.gsp'].render([
-                    content: parts['contact/form.gsp'].render()
-                ])
-            ),
+            content: parts['contact/form.gsp'].render(),
             extraScripts: [
                 tagBuilder.script([
                     src: urlBuilder.relative('contact.js')
