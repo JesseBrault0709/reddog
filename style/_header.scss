@@ -6,12 +6,11 @@ header {
     gap: 1em;
     padding: 1em;
 
-    h1 {
+    #site-title {
         margin: 0;
         padding: 0;
-        font-family: $ebg, serif;
         letter-spacing: 0.05em;
-        color: var(--darkRed);
+        border-bottom: none;
     }
 
     nav {
@@ -24,22 +23,24 @@ header {
         }
 
         #main-nav-hamburger-container.show {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 0.5em;
-
-            #main-nav-hamburger-label {
-                font-family: $ebg;
-            }
-
             #main-nav-hamburger-button {
-                border: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 0.5em;
+
                 background: none;
                 margin: 0;
-                padding: 0;
+                padding: 0.5em;
+                border: none;
                 line-height: 0;
                 cursor: pointer;
+
+                font-size: 17px;
+
+                #main-nav-hamburger-label {
+                    font-family: $ebg;
+                }
             }
         }
 

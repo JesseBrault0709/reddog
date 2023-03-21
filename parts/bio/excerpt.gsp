@@ -10,16 +10,22 @@
 <article>
     <%
         def text = binding.text
-        out << parts['bio/headshotTitle.gsp'].render([
+        
+        def b = new StringBuilder(); // semi-colon otherwise vscode syntax highlighting breaks
+        b << parts['bio/headshotTitle.gsp'].render([
             title: text.frontMatter.title,
             role: text.frontMatter.role,
             image: text.frontMatter.image
         ])
-        out << tagBuilder.blockquote([
+        b << tagBuilder.blockquote([
             class: 'article-excerpt'
         ], text.getExcerpt(25) + '...')
-        out << tagBuilder.a([
+        b << tagBuilder.a([
             href: urlBuilder.relative(binding.fullPath)
         ], 'View More')
+
+        out << parts['article/text.gsp'].render([
+            content: b.toString()
+        ])
     %>
 </article>

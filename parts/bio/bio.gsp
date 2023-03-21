@@ -5,13 +5,18 @@
 %>
 <article>
     <%
-        out << parts['bio/headshotTitle.gsp'].render([
+        def b = new StringBuilder(); // semi-colon otherwise vscode syntax highlighting breaks
+        b << parts['bio/headshotTitle.gsp'].render([
             title: text.frontMatter.title,
             role: text.frontMatter.role,
             image: text.frontMatter.image,
             imageWidth: text.frontMatter.imageWidth,
             imageHeight: text.frontMatter.imageHeight
         ])
-        out << text.render()
+        b << text.render()
+
+        out << parts['article/text.gsp'].render([
+            content: b.toString()
+        ])
     %>
 </article>
