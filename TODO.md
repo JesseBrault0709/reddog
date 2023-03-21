@@ -1,5 +1,7 @@
--   [ ] Get rid of computer modern font
--   [ ] Consider everything in EB Garamond or Palatino
+# TODO
+
+-   [x] Get rid of computer modern font
+-   [x] Consider everything in EB Garamond or Palatino
 -   [ ] Despaghettify:
     -   Index should be a special page
     -   Condense parts such that a part represents either a re-usable component, or a section of content for a page.
