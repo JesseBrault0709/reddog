@@ -2,6 +2,9 @@
     out << parts['head.gsp'].render([
         author: binding.author,
         description: binding.description,
+        extraStyles: [
+            'bio.css'
+        ],
         pageTitle: binding.pageTitle,
         og: [
             description: binding.description,

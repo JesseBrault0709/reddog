@@ -1,15 +1,3 @@
----
-template: index.gsp
-title: About
-heroSrc: group.jpg
-heroAlt: Red Dog Ensemble Group Photo
-heroWidth: 600
-heroHeight: 400
-ogImage: group.jpg
-ogImageWidth: 600
-ogImageHeight: 400
----
-
 # About
 
 Founded by Jesse Brault and Will Stackpole, **Red Dog Ensemble** is a collaboration of young musical minds who seek to create and perform music not only relevant for our time but also engaging, fresh, and beautiful. A collection of composers, instrumentalists, and a conductor, _Red Dog_ hopes to deliver to its audiences both entertaining and meaningful experiences, exploring the music making ritual through means both traditional and conceptually inventive.

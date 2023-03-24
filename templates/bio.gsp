@@ -6,6 +6,9 @@
         out << parts['head.gsp'].render([
             author: 'Red Dog Ensemble',
             description: text.getExcerpt(25) + '...',
+            extraStyles: [
+                'bio.css'
+            ],
             pageTitle: "${ globals.siteTitle }: ${ text.frontMatter.title }",
             og: [
                 description: text.getExcerpt(25) + '...',

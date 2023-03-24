@@ -6,21 +6,19 @@
         out << parts['head.gsp'].render([
             author: 'Red Dog Ensemble',
             description: description,
+            extraStyles: ['album.css'],
             pageTitle: "${ globals.siteTitle }: Neon and Oak",
             og: [
                 description: description,
-                title: 'Neon and Oak'
+                title: 'Neon and Oak',
+                image: urlBuilder.absolute('images/neonAndOakCover.jpg'),
+                imageWidth: 600,
+                imageHeight: 600
             ]
         ])
 
         out << parts['body.gsp'].render([
-            content: tagBuilder.article(texts.find { it.path == 'album.md' }.render()),
-            hero: [
-                src: 'neonAndOakCover.jpg',
-                alt: 'Album Cover of Neon and Oak.',
-                width: 500,
-                height: 500
-            ]
+            content: parts['album/content.gsp'].render()
         ])
     %>
 </html>

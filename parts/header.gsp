@@ -33,18 +33,18 @@
     }
 %>
 <header>
-    <h1>$globals.siteTitle</h1>
+    <h1 id="site-title">$globals.siteTitle</h1>
     <nav id="main-nav">
         <div id="main-nav-hamburger-container">
-            <span id="main-nav-hamburger-label">Menu</span>
             <button id="main-nav-hamburger-button">
-                <span id="main-nav-hamburger-span" class="material-symbols-outlined"></span>
+                <span id="main-nav-hamburger-label">Menu</span>
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
         <ul id="main-nav-ul">
             <%
                 def navButtons = [
-                    makeNavButton('About', 'index.md'),
+                    makeNavButton('About', 'index.gsp'),
                     makeNavButton('The Album', 'album.gsp'),
                     makeNavButton('The Composers', 'composers.gsp'),
                     makeNavButton('The Musicians', 'musicians.gsp'),

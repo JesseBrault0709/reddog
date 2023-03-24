@@ -6,20 +6,23 @@
     }
     check 'text'
     check 'fullPath'
+
+    def text = binding.text
 %>
 <article>
-    <%
-        def text = binding.text
-        out << parts['bio/headshotTitle.gsp'].render([
-            title: text.frontMatter.title,
-            role: text.frontMatter.role,
-            image: text.frontMatter.image
-        ])
-        out << tagBuilder.blockquote([
-            class: 'article-excerpt'
-        ], text.getExcerpt(25) + '...')
-        out << tagBuilder.a([
-            href: urlBuilder.relative(binding.fullPath)
-        ], 'View More')
-    %>
+    <div class="gap-1 column-600">
+        <%=
+            parts['bio/headshotTitle.gsp'].render([
+                title: text.frontMatter.title,
+                role: text.frontMatter.role,
+                image: text.frontMatter.image
+            ])
+        %>
+        <div class="gap-1 left-right-padded">
+            <blockquote class="quote">
+                <%= text.getExcerpt(25) + '...' %>
+            </blockquote>
+            <a href="${ urlBuilder.relative(binding.fullPath) }">View More</a>
+        </div>
+    </div>
 </article>

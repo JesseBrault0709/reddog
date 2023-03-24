@@ -1,7 +1,7 @@
 @import 'globals';
 @import 'header';
 @import 'body';
-@import 'article';
+@import 'content';
 @import 'footer';
 
 :root {
@@ -10,15 +10,12 @@
     --lightGray: #{$lightGray};
     --red: #{$red};
     --darkRed: #{$darkRed};
+    --barnRed: #{$barnRed};
     --white: #{$white};
 }
 
 html {
     box-sizing: border-box;
-    font-size: 17px;
-    line-height: 1.5em;
-    letter-spacing: 0.025em;
-    color: var(--black);
 }
 
 *,
